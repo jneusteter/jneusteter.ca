@@ -1,3 +1,3 @@
 <template>
-  <div>Hello World.</div>
+  <div class="bg-slate-700">Hello World.</div>
 </template>
