@@ -1,0 +1,3 @@
+CREATE TABLE `batteries` (
+	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL
+);
