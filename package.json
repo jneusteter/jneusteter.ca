@@ -8,14 +8,22 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "npm run generate && scp -r ./.output/public/* jneusteter@jneusteter.ca:/home/jneusteter/jneusteter.ca/dist/"
+    "deploy": "npm run generate && scp -r ./.output/public/* jneusteter@jneusteter.ca:/home/jneusteter/jneusteter.ca/dist/",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "drizzle-kit": "^0.26.2",
+    "tsx": "^4.19.1"
   }
 }
