@@ -4,6 +4,7 @@
     "libsql",
     "nuxt",
     "nuxtjs",
+    "primevue",
     "tailwindcss"
   ]
 }
