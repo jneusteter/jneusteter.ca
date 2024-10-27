@@ -12,5 +12,6 @@ export default defineNuxtConfig({
     config: {
       content: ['./passthrough/**/*.ts'],
     }
-  }
+  },
+  css: ['@/assets/css/main.css'],
 })
