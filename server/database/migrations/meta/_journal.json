@@ -15,6 +15,20 @@
       "when": 1729964427550,
       "tag": "0001_majestic_synch",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1730038184169,
+      "tag": "0002_organic_dragon_lord",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1730039356180,
+      "tag": "0003_gorgeous_natasha_romanoff",
+      "breakpoints": true
     }
   ]
 }
