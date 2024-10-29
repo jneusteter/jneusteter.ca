@@ -4,6 +4,11 @@ export const batteries = sqliteTable('batteries', {
   id: integer('id').primaryKey({ autoIncrement: true }),
   name: text('name'),
   cityId: integer('city_id').references(() => cities.id),
+  status: text('status'),
+  MWh: integer('MWh'),
+  MW: integer('MW'),
+  manufacturer: text('manufacturer'),
+  project_website: text('project_website'),
   createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
 })
 

@@ -4,13 +4,13 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "node ./backup.js && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "deploy": "npm run generate && scp -r ./.output/public/* jneusteter@jneusteter.ca:/home/jneusteter/jneusteter.ca/dist/",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
+    "db:migrate": "node ./backup.js && drizzle-kit migrate",
     "studio": "drizzle-kit studio"
   },
   "dependencies": {
