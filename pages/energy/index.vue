@@ -11,7 +11,11 @@
             header="Add Battery"
             class="!w-96"
           >
-            <InputText placeholder="Name" />
+            <div class="flex flex-col gap-2">
+              <InputText placeholder="Name" class="w-full" />
+
+              <Select />
+            </div>
           </Drawer>
         </DevOnly>
       </div>
@@ -29,6 +33,7 @@ import { useFetch } from "#imports";
 import DataTable from "primevue/datatable";
 import Drawer from "primevue/drawer";
 import InputText from "primevue/inputtext";
+import Select from "primevue/select";
 
 const { data } = useFetch("/api/batteries");
 const show = ref(false);
