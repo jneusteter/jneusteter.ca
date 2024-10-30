@@ -46,51 +46,6 @@ const drawer: PrimeVuePTOptions["drawer"] = {
   title: {
     class: ['font-semibold text-xl']
   },
-  icons: {
-    class: ['flex items-center']
-  },
-  closeButton: {
-    class: [
-      'relative',
-
-      // Flexbox and Alignment
-      'flex items-center justify-center',
-
-      // Size and Spacing
-      'mr-2',
-      'last:mr-0',
-      'w-7 h-7',
-
-      // Shape
-      'border-0',
-      'rounded-full',
-
-      // Colors
-      'text-slate-500 bg-transparent',
-
-      // Transitions
-      'transition duration-200 ease-in-out',
-
-      // States
-      'hover:text-slate-700',
-      'hover:bg-slate-100',
-      'focus:outline-none focus:outline-offset-0 focus:ring-1',
-      'focus:ring-primary-500',
-
-      // Misc
-      'overflow-hidden'
-    ]
-  },
-  closeButtonIcon: {
-    class: [
-      // Display
-      'inline-block',
-
-      // Size
-      'w-4',
-      'h-4'
-    ]
-  },
   content: {
     class: [
       // Spacing and Size
@@ -109,7 +64,6 @@ const drawer: PrimeVuePTOptions["drawer"] = {
       // Transitions
       'transition-all',
       'duration-300',
-      { 'p-5': !props.position == 'full' },
 
       // Background and Effects
       { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal }
