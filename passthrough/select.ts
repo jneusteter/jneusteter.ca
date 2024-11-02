@@ -15,7 +15,6 @@ const select: PrimeVuePTOptions['select'] = {
       { 'bg-slate-50': !props.disabled },
 
       'border',
-      { 'dark:border-surface-600': parent.instance.$name == 'InputGroup' },
       { 'border-slate-300 dark:border-surface-600': !props.invalid },
 
       // Invalid State
@@ -24,17 +23,16 @@ const select: PrimeVuePTOptions['select'] = {
       { 'border-red-500 dark:border-red-400': props.invalid },
 
       // Transitions
-      'transition-all',
-      'duration-200',
+      'transition-all duration-200',
 
       // States
-      { 'hover:border-surface-400 dark:hover:border-surface-600': !props.invalid },
-      { 'outline-none outline-offset-0 ring-1 ring-primary-500 dark:ring-primary-400 z-10': state.focused },
+      { 'hover:border-slate-400': !props.invalid },
+      { 'outline-none outline-offset-0 ring-1 ring-primary-500 z-10': state.focused },
 
       // Misc
       'cursor-pointer',
       'select-none',
-      { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled }
+      { 'bg-slate-200 select-none pointer-events-none cursor-default': props.disabled }
     ]
   }),
   label: ({ props, parent }) => ({
@@ -43,26 +41,23 @@ const select: PrimeVuePTOptions['select'] = {
       'leading-[normal]',
 
       // Display
-      'block',
-      'flex-auto',
+      'block flex-auto',
 
       // Color and Background
       'bg-transparent',
       'border-0',
-      { 'text-surface-800 dark:text-white/80': props.modelValue != undefined, 'text-slate-400 dark:text-surface-500': props.modelValue == undefined },
-      'placeholder:text-slate-400 dark:placeholder:text-surface-500',
+      { 'text-slate-800': props.modelValue != undefined, 'text-slate-400': props.modelValue == undefined },
+      'placeholder:text-slate-400',
 
       // Sizing and Spacing
-      'w-[1%]',
-      'py-2 px-3',
+      'w-[1%] py-2 px-3',
       { 'pr-7': props.showClear },
 
       //Shape
       'rounded-none',
 
       // Transitions
-      'transition',
-      'duration-200',
+      'transition duration-200',
 
       // States
       'focus:outline-none focus:shadow-none',
@@ -81,12 +76,11 @@ const select: PrimeVuePTOptions['select'] = {
   dropdown: {
     class: [
       // Flexbox
-      'flex items-center justify-center',
-      'shrink-0',
+      'flex items-center justify-center shrink-0',
 
       // Color and Background
       'bg-transparent',
-      'text-surface-500',
+      'text-slate-500',
 
       // Size
       'w-12',
@@ -98,8 +92,7 @@ const select: PrimeVuePTOptions['select'] = {
   overlay: {
     class: [
       // Colors
-      'bg-slate-50 dark:bg-surface-900',
-      'text-slate-700 dark:text-white/80',
+      'bg-slate-50 text-slate-700',
 
       // Shape
       'border border-slate-300',
@@ -107,22 +100,11 @@ const select: PrimeVuePTOptions['select'] = {
       'shadow-md'
     ]
   },
-  listContainer: {
-    class: [
-      // Sizing
-      'max-h-[200px]',
-
-      // Misc
-      'overflow-auto'
-    ]
-  },
-  list: {
-    class: 'p-1 list-none m-0'
-  },
+  listContainer: 'max-h-[200px] overflow-auto',
+  list: 'p-1 list-none m-0',
   option: ({ context }) => ({
     class: [
-      'relative',
-      'flex items-center',
+      'relative flex items-center',
 
       // Font
       'leading-none',
@@ -136,15 +118,15 @@ const select: PrimeVuePTOptions['select'] = {
 
       // Colors
       {
-        'text-slate-700 dark:text-white/80': !context.focused && !context.selected,
-        'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
+        'text-slate-700': !context.focused && !context.selected,
+        'bg-slate-200': context.focused && !context.selected,
         'bg-highlight': context.selected
       },
 
       //States
       { 'hover:bg-slate-100': !context.focused && !context.selected },
       { 'hover:bg-highlight-emphasis': context.selected },
-      { 'hover:text-slate-700 hover:bg-slate-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
+      { 'hover:text-slate-700 hover:bg-slate-100': context.focused && !context.selected },
 
       // Transition
       'transition-shadow duration-200',
@@ -178,7 +160,7 @@ const select: PrimeVuePTOptions['select'] = {
       'py-2 px-3',
 
       // Color
-      'text-surface-800 bg-transparent'
+      'text-slate-800 bg-transparent'
     ]
   },
   header: {
