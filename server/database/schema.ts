@@ -36,3 +36,4 @@ export const cities = sqliteTable('cities', {
   stateId: integer('state_id').references(() => states.id),
   createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
 })
+export type City = typeof cities.$inferSelect
