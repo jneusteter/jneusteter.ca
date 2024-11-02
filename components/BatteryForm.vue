@@ -13,6 +13,8 @@
 
       <Select :options="citiesOptions" placeholder="Select A City" />
 
+      <InputNumber />
+
       <Button>Save</Button>
     </div>
   </Drawer>
@@ -23,6 +25,7 @@ import { ref } from "vue";
 
 import Drawer from "primevue/drawer";
 import InputText from "primevue/inputtext";
+import InputNumber from "primevue/inputnumber";
 import Select from "primevue/select";
 import Button from "primevue/button";
 

@@ -1,10 +1,11 @@
 import { button } from './button';
 import { dataTable } from './data-table';
 import { drawer } from './drawer';
+import { inputNumber } from './input-number';
 import { inputText } from './input-text';
 import { select } from './select';
 
-export default { button, dataTable, drawer, inputText, select };
+export default { button, dataTable, drawer, inputNumber, inputText, select };
 
 // https://github.com/primefaces/primevue-tailwind/tree/8cc49b56380a79a1682d93865d690de1470945c1/presets/aura 
 // aura
